@@ -61,6 +61,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="Microsoft.Build.Utilities.v3.5" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core">
     </Reference>
