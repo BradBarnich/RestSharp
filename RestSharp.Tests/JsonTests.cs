@@ -729,6 +729,17 @@ namespace RestSharp.Tests
             Assert.NotEmpty(output.EmployeesPay);
         }
 
+        [Fact]
+        public void Can_Deserialize_Static_With_Null_Dynamic()
+        {
+            const string content = "{\"content\":{ \"name\":\"foo\", \"body\": null } }";
+            var json = new JsonDeserializer { RootElement = "content" };
+            var output = json.Deserialize<StaticWithDynamic>( new RestResponse { Content = content } );
+
+            Assert.Equal("foo", output.Name);
+            Assert.Null(output.Body);
+        }
+
         private string CreateJsonWithUnderscores()
         {
             var doc = new JsonObject();

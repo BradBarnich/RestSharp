@@ -270,4 +270,10 @@ namespace RestSharp.Tests
     {
         public decimal Value { get; set; }
     }
+
+    public class StaticWithDynamic
+    {
+        public string Name { get; set; }
+        public dynamic Body { get; set; }
+    }
 }
